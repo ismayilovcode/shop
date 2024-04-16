@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #todoContainer .about,
+      #todoContainer2 .about {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+        font-weight: bold;
+      }
+
+      #todoContainer,
+      #todoContainer2 {
+        flex-direction: row;
+        display: flex;
+        gap: 15px;
+      }
+
+      #todoContainer span,
+      #todoContainer2 span {
+        background-color: whitesmoke;
+        padding: 12px 14px;
+      }
+
+      .shop {
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+
+      #todoShop {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="createContainer">
+      <input type="text" id="todoContent" />
+      <input type="text" id="value" />
+      <button onclick="addnewtodo()">Add new todo</button>
+    </div>
+
+    <div id="todoContainer"></div>
+
+    <button class="shop" onclick="list()">
+      <i class="fa-solid fa-basket-shopping"></i>
+    </button>
+
+    <div id="todoShop">
+      <div id="todoContainer2"></div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/d49ab259ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
